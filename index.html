@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cloud Browse</title>
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href='http://fonts.googleapis.com/css?family=Cabin|Righteous' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="top-bar">
+		<h1 class="wrapper" id="name">Cloud Browser</h1>
+		<h2 class="wrapper" id="motto">soundcloud mangement</h2>
+	</div>
+	<div id="login">
+		
+	</div>
+	<div class="hidden" id="ui">
+		<h2>Welcome <span></span></h2>
+		<img id="avatar" />
+		<div id="city"></div>
+	</div>
+	<div id="input-section">
+		<button id="log">LogIn</button>
+		<form class="search-form" action="index_submit" method="get">
+		</form>
+		<input id="lookup" type="text" name="search" size="20" placeholder="User, Tracks etc..">
+		<input id="go" type="button" name="submit" value="Search">
+		<ul>
+			<li><a href="#" class="genre">Dubstep</a></li>
+			<li><a href="#" class="genre">Trap</a></li>
+			<li><a href="#" class="genre">Future Bass</a></li>
+		</ul>
+		<!--div class="search-form">
+			<input id="lookup" type="text" name="tags" size="20" placeholder="User, Tracks etc..">
+			<input id="go" type="submit" value="search">
+		</div-->
+	</div>
+	<div id="results-container">
+	</div>
+
+	<div id="track-player">
+	</div>
+
+
+</body>
+<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script src="http://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
+<script type="text/javascript" src="js/scwigit.js"></script>
+<!--script type="text/javascript" charset="utf-8" src="js/jquery.sc.api.js"></script-->
+</html>
