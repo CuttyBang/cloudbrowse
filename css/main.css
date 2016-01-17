@@ -16,6 +16,16 @@ body {
 	margin: 0px;
 }
 
+footer {
+	color: #bbb;
+	text-align: center;
+	font-family: 'Cabin', sans-serif;
+	padding: 1em;
+}
+
+/*****************************
+TOP LEVEL STYLING
+*****************************/
 
 #top-bar {
 	border: 1px solid #ccc;
@@ -32,7 +42,7 @@ body {
 	margin-left: 2%;
 }
 
-#name {
+#masthead-title {
 	color: #fff;
 	font-family: 'Righteous', sans-serif;
 	font-size: 3em;
@@ -48,15 +58,46 @@ body {
 	margin-bottom: 1em;
 }
 
+#instructions {
+	float: right;
+	margin-right: 1em;
+	margin-top: 1.4em;
+	color: #ddd;
+}
+
+#log {
+	/*height: 2.3em;
+	background-color: #36454f;
+	font-family: 'Cabin', sans-serif;
+	color: #fff;
+	border: none;
+	width: 60px;*/
+	background-color: #333;
+	border: none;
+	border-radius: 5px;
+	margin-bottom: 2em;
+	margin-right: 2em;
+	float: right;
+}
+
+#log:hover {
+	background-color: #25343e;
+}
+
+
+
+/*****************************
+FORMS
+*****************************/
+
 #input-section {
 	margin-top: 1em;
 	margin-left: 1em;
 	margin-bottom: 2em;
 }
 .search-form {
-	width: 30%;
-	margin-right: auto;
-	margin-left: auto;
+	margin-right: 1em;
+	margin-left: 2em;
 }
 
 #go {
@@ -74,23 +115,6 @@ body {
 	background-color: #25343e;
 }
 
-#log {
-	height: 2.3em;
-	border-radius: 5px;
-	margin-bottom: 1em;
-	background-color: #36454f;
-	font-family: 'Cabin', sans-serif;
-	color: #fff;
-	border: none;
-	width: 60px;
-	margin-right: 2em;
-	float: right;
-}
-
-#log:hover {
-	background-color: #25343e;
-}
-
 #lookup {
 	height: 2.3em;
 	font-family: 'Cabin', sans-serif;
@@ -100,43 +124,134 @@ body {
 	width: 300px
 }
 
+
+
+/*****************************
+LOGIN USER STYLING
+*****************************/
+
 #ui {
 	font-family: 'Cabin', sans-serif;
 	color: #ddd;
 	margin-left: 1em;
 	margin-top: 1em;
 	padding-left: 1em;
+	width: 105px;
 }
 
+.right {
+	position: absolute;
+	left: 137px;
+}
 
+#avatar{
+	display: block;
+}
 
-#results-container {
+#get-my-tracks {
+	margin-top: .5em;
+	height: 1.5em;
+	width: 10em;
+	border-radius: 5px;
+	border: none;
+	background-color: #36454f;
+	text-align: center;
+	color: #aaa;
+}
+
+#get-my-tracks:hover {
+	cursor: pointer;
+	background-color: #14232d;
+}
+
+/*****************************
+RESULTS STYLING
+*****************************/
+
+#track-player {
 	width: 60%;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.containers {
+	width: 60%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 1em;
+	padding: 1em;
 	background-color: #2e312d;
-	height: 100%;
+	height: 30em;
+	overflow: scroll;
+	margin-top: 1em;
+}
+
+
+.items {
+	list-style: none;
+	font-family: 'Cabin', sans-serif;
+	font-size: 2em;
+	color: #ddd;
+	margin-left: .5em;
+	margin-right: .5em;
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+.items:hover {
+	cursor: pointer;
+}
+
+.items:active {
+	color: #fff;
+}
+
+.result-info {
+	text-align: center;
+	color: #555;
+	background-color: #2e312d;
+	margin-top: 0;
+}
+
+.track-comments {
+	font-family: 'Cabin', sans-serif;
+	font-size: 2em;
+	color: #ddd;
+	margin-left: .5em;
+	margin-right: .5em;
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+.cName {
+	font-size: 1.5em;
+	color: #888;
+	margin-bottom: 0em;
+}
+
+.track-comments:hover {
+	cursor: pointer;
+}
+
+.track-comments:active {
+	color: #fff;
+}
+
+.comment-buttons {
+	background-color: #36454f;
+	height: 2em;
+	width: 10.5em;
+	border-radius: 5px;
+	border: none;
+	margin-left: 5em;
+	color: #eee;
 }
 
 .hidden {
 	visibility: hidden;
 }
 
-#results {
-	list-style: none;
-}
 
-.items {
-	list-style: none;
-}
-
-#login {
-	font-family: 'Cabin', sans-serif;
-	color: #fffs;
-	margin-left: 1em;
-	margin-top: 1em;
-	text-decoration: none;
-}
 
 
 

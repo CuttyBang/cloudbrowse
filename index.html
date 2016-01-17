@@ -10,39 +10,42 @@
 </head>
 <body>
 	<div id="top-bar">
-		<h1 class="wrapper" id="name">Cloud Browser</h1>
+		<h1 class="wrapper" id="masthead-title">Cloud Browser</h1>
+		<button id="log"><img src="img/cloud-logo-white.png"></button>
+		<p id="instructions">Log in ></p>
 		<h2 class="wrapper" id="motto">soundcloud mangement</h2>
 	</div>
-	<div id="login">
-		
-	</div>
 	<div class="hidden" id="ui">
-		<h2>Welcome <span></span></h2>
+		<div class="right">
+			<h2><span></span></h2>
+			<h4>Followers: <span id="follows"></span></h4>
+			<h3 id="city"></h3>
+			<button id="get-my-tracks">Get My Tracks</button>
+		</div>
 		<img id="avatar" />
-		<div id="city"></div>
 	</div>
 	<div id="input-section">
-		<button id="log">LogIn</button>
-		<form class="search-form" action="index_submit" method="get">
+		<form class="search-form" id="forms" onsubmit="return false;" required>
+			<input type="text" id="lookup" name="search" size="20" placeholder="search users">
+			<input id="go" type="submit" value="Submit">
 		</form>
-		<input id="lookup" type="text" name="search" size="20" placeholder="User, Tracks etc..">
-		<input id="go" type="button" name="submit" value="Search">
-		<ul>
-			<li><a href="#" class="genre">Dubstep</a></li>
-			<li><a href="#" class="genre">Trap</a></li>
-			<li><a href="#" class="genre">Future Bass</a></li>
-		</ul>
-		<!--div class="search-form">
-			<input id="lookup" type="text" name="tags" size="20" placeholder="User, Tracks etc..">
-			<input id="go" type="submit" value="search">
-		</div-->
 	</div>
-	<div id="results-container">
-	</div>
-
 	<div id="track-player">
 	</div>
-
+	<button class="comment-buttons" id="show-comment-btn">Show/Hide Comments</button>
+	<div class="containers" id='comment-container'>
+		<h1 class="result-info" id="resulter">Comments for: <span></span></h1>
+		<div id="comment">
+		</div>
+	</div>
+	<div class="containers" id="results-container">
+		<h1 class="result-info" id="returns">Results for: <span></span></h1>
+		<ul id="results">
+		</ul>
+		<ul id="userResults">
+		</ul>
+	</div>
+	<footer>&copy Nathan McElwain 2016</footer>
 
 </body>
 <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
