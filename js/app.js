@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	$('#write-comment-container').hide();
+	$('#write-comment-btn').hide();
 	$('#comment-container').hide();
 	$('#show-comment-btn').hide();
 	$('#results-container').hide();
@@ -13,6 +15,7 @@ $(document).ready(function(){
 	var users = {};
 	var userSongs = {};
 	var userTrackIds = {};
+	var tracksComment = [];
 
 
 
@@ -96,6 +99,12 @@ $(document).ready(function(){
 		});
 
 	}
+	
+	function writeComment (id, cmnt) {
+		SC.post('/tracks/'+id+'/comments', {
+			comment: { body: cmnt, timestamp: 5000 } 
+		});
+	}
 
 	//play user tracks
 	$('#results-container #results').on('click', 'li', function(e){
@@ -136,6 +145,7 @@ $(document).ready(function(){
 		var title = e.target.innerHTML;
 		if (userSongs.hasOwnProperty(title)) {
 			player(userSongs[title]);
+			$('#write-comment-btn').show();
 		}
 	});	
 
@@ -145,6 +155,7 @@ $(document).ready(function(){
 		var title = e.target.innerHTML;
 		if (userTrackIds.hasOwnProperty(title)){
 			var id = userTrackIds[title];
+			tracksComment.push(id);
 			SC.get('/tracks/'+id+'/comments').then(function(comments){
 				for(var i = 0; i<comments.length; i++){
 					$('#comment').append('<img src="'+comments[i].user.avatar_url+'" /><p class="cName">'+comments[i].user.username+'</p><p> on: '+comments[i].created_at+'</p><br>'+'<p class="track-comments">'+comments[i].body+'</p>');
@@ -155,11 +166,26 @@ $(document).ready(function(){
 		}
 	});
 
+	//post comments on tracks
+	$('#write-comment-form').on('submit', function(){
+		var cmnt = $('#write-comment-text-box').val();
+		var id = tracksComment[tracksComment.length -1];
+		writeComment(id, cmnt);
+		$('#write-comment-container').hide();
+		$('#write-comment-text-box').val('');
+	});
+
+
 	$('#show-comment-btn').click(function(){
 				$('#comment-container').toggle();
 
 			});
 	
+	$('#write-comment-btn').click(function() {
+		$('#write-comment-container').toggle();
+	});
+	
+	//get users's songs
 	document.querySelector('#get-my-tracks').addEventListener('click', function(){
 		$('#userResults').html('');
 		$('#track-player').html('');
@@ -167,15 +193,18 @@ $(document).ready(function(){
 		$('#comment').html('');
 		$('#comment-container').hide();
 		$('#show-comment-btn').hide();
+		$('#write-comment-container').hide();
+		$('#write-comment-btn').hide
 		me();
 	});
 
-
+	//log in user
 	document.querySelector('#log').addEventListener('click', function(){
 		login();
 		console.log('click');
 	});
 
+	//search form submission
 	$('#forms').on('submit', function(){
 		var searchVal = $('#lookup').val();
 		$('#track-player').html('');
@@ -185,6 +214,8 @@ $(document).ready(function(){
 		$('#returns span').html('');
 		$('#comment-container').hide();
 		$('#show-comment-btn').hide();
+		$('#write-comment-container').hide();
+		$('#write-comment-btn').hide();
 		$('#lookup').val('');
 		searchUsers(searchVal);
 	});
