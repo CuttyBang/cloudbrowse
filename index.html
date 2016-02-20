@@ -11,45 +11,19 @@
 <body>
 	<div id="top-bar">
 		<h1 class="wrapper" id="masthead-title">Cloud Browser</h1>
-		<button id="log"><img src="img/cloud-logo-white.png"></button>
-		<p id="instructions">Log in ></p>
-		<h2 class="wrapper" id="motto">soundcloud mangement</h2>
-	</div>
-	<div class="hidden" id="ui">
-		<div class="right">
-			<h2><span></span></h2>
-			<h4>Followers: <span id="follows"></span></h4>
-			<h3 id="city"></h3>
-			<button id="get-my-tracks">Get My Tracks</button>
-		</div>
-		<img id="avatar" />
+		<h2 class="wrapper" id="motto">Soundcloud sample searcher</h2>
 	</div>
 	<div id="input-section">
 		<form class="search-form" id="forms" onsubmit="return false;" required>
-			<input type="text" id="lookup" name="search" size="20" placeholder="search users">
-			<input id="go" type="submit" value="Submit">
+			<input type="text" id="lookup" name="search" placeholder="search sounds">
+			<input id="go" type="submit" value="Go">
 		</form>
 	</div>
 	<div id="track-player">
 	</div>
-	<div id="write-comment-container">
-		<form id="write-comment-form" onsubmit="return false;" required>
-			<input type="text" id="write-comment-text-box" name="comment-text-box" size="20" placeholder="write comment here">
-			<input id="write-comment-submit" type="submit" value="Submit">
-		</form>
-	</div>
-	<button class="comment-buttons" id="write-comment-btn">Comment on this Track</button><br>
-	<button class="comment-buttons" id="show-comment-btn">Show/Hide Comments</button>
-	<div class="containers" id='comment-container'>
-		<h1 class="result-info" id="resulter">Comments for: <span></span></h1>
-		<div id="comment">
-		</div>
-	</div>
 	<div class="containers" id="results-container">
 		<h1 class="result-info" id="returns">Results for: <span></span></h1>
 		<ul id="results">
-		</ul>
-		<ul id="userResults">
 		</ul>
 	</div>
 	<footer>&copy CloudBrowse 2016</footer>
