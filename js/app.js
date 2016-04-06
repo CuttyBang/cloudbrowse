@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 	SC.initialize({
 		client_id: '5c3759b4842b6a82f2a156a1b7aa0187',
-		redirect_uri: 'https://cuttybang.github.io/cloudbrowse/callback.html'
+		redirect_uri: 'https://cuttybang.github.io/cloudbrowse/'
 	});
 
 	//auto connect
