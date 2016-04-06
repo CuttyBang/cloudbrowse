@@ -1,28 +1,3 @@
-/*****************************
-RESPONSIVE STYLING
-*****************************/
-
-@media screen and (min-width: 768px) {
-	
-	#masthead-title {
-		color: #fff;
-		font-family: 'Righteous', sans-serif;
-		font-size: 3.5em;
-		margin-bottom: 0em;
-		text-align: center;
-		
-	}
-
-	#motto {
-		color: #fff;
-		font-family: 'Cabin', sans-serif;
-		font-size: 1.75em;
-		text-align: center;
-		margin-top: 0.5em;
-		margin-bottom: 1em;
-	}
-} 
-
 
 /*****************************
 GENERAL STYLING
@@ -192,7 +167,7 @@ RESULTS STYLING
 
 
 @media screen and (min-width: 768px) {
-	
+
 	#masthead-title {
 		color: #fff;
 		font-family: 'Righteous', sans-serif;
@@ -201,7 +176,7 @@ RESULTS STYLING
 		font-size: 3.5em;
 		margin: 0;
 		text-align: center;
-		
+
 	}
 
 	#motto {
@@ -235,7 +210,7 @@ RESULTS STYLING
 		width: 20%;
 		margin: 0;
 	}
-} 
+}
 
 @media screen and (min-width: 1024px) {
 
@@ -247,7 +222,7 @@ RESULTS STYLING
 		font-size: 4em;
 		margin: 1em 0 0 0;
 		text-align: center;
-		
+
 	}
 
 	#motto {
@@ -275,24 +250,3 @@ RESULTS STYLING
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

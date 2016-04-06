@@ -3,16 +3,7 @@ $(document).ready(function(){
 
 	$('#results-container').hide();
 
-	var userPerma;
-	var personal;
-	var mePerma;
-	var mySongs = {};
-	var mySongIds = {};
-	var users = {};
-	var userSongs = {};
-	var userTrackIds = {};
-	var tracksComment = [];
-	var followComments = {};
+
 	var samples = [];
 	var sampleIds = [];
 
@@ -20,7 +11,7 @@ $(document).ready(function(){
 
 	SC.initialize({
 		client_id: '5c3759b4842b6a82f2a156a1b7aa0187',
-		redirect_uri: 'http://localhost.dev/cloudbrowse/callback.html'
+		redirect_uri: 'https://cuttybang.github.io/cloudbrowse/callback.html'
 	});
 
 	//auto connect
@@ -44,7 +35,7 @@ $(document).ready(function(){
 
 	function searchSounds(query){
 		$('#results-container').show();
-		$('#results').html('')
+		$('#results').html('');
 		SC.get('/tracks', {
 			q: query,
 			duration: {to: 30000},
@@ -57,7 +48,7 @@ $(document).ready(function(){
 				sampleIds[tracks[i].title] = tracks[i].id;
 			}
 		$('#results').show();
-		})
+	});
 
 	}
 
